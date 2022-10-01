@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/chart.css">
+    <script src="https://kit.fontawesome.com/07d3dd4226.js" crossorigin="anonymous"></script>
+    <title>Dashboard theme</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- HEADER SECTION -->
+        <header>
+            <div class="header" id="header">
+                <div class="logo">
+                    <!-- <img src="./assets/img/Logo.png" alt="Logo"> -->
+                    <h1>LOGO</h1>
+                </div>
+                <div class="navbar">
+                    <div class="navbar-logo">
+                        <!-- <img src="./assets/img/Logo1.png" alt="Logo"> -->
+                        <h1>LOGO</h1>
+                    </div>
+                    <div class="current-price">
+                        <p>Good Morning Dude!</p>
+                    </div>
+                    <div class="cta-button">
+                        <div>
+                            <a class="primary-button">
+                                Support <i class="fa-solid fa-question"></i>
+                            </a>
+                        </div>
+                        <div class="dark-mode">
+                            <a class="secondary-button">
+                                <i class="fa-solid fa-moon fa-sun"></i>
+                            </a>
+                        </div>
+                        <div class="humberger-menu" id="humberger-menu">
+                            <a class="secondary-button">
+                                <i class="fa-solid fa-bars"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- BODY SECTION -->
+        <section class="body-section" id="body-section">
+            <div class="sidebar" id="sidebar-menu">
+                <a class="menu-item">
+                    <div class="icon">
+                        <i class="fa-solid fa-house"></i>
+                    </div>
+                    <div class="menu-name">
+                        <span>Dashboard</span>
+                    </div>
+                </a>
+                <a class="menu-item">
+                    <div class="icon">
+                        <i class="fa-solid fa-thumbtack"></i>
+                    </div>
+                    <div class="menu-name">
+                        <span>Stake</span>
+                    </div>
+                </a>
+                <a class="menu-item">
+                    <div class="icon">
+                        <i class="fa fa-table"></i>
+                    </div>
+                    <div class="menu-name">
+                        <span>Band</span>
+                    </div>
+                </a>
+                <a class="menu-item">
+                    <div class="icon">
+                        <i class="fa fa-calculator"></i>
+                    </div>
+                    <div class="menu-name">
+                        <span>Calculator</span>
+                    </div>
+                </a>
+                <a class="menu-item">
+                    <div class="icon">
+                        <i class="fa-solid fa-fire"></i>
+                    </div>
+                    <div class="menu-name">
+                        <span>Vaults</span>
+                    </div>
+                </a>
+                <a class="menu-item">
+                    <div class="icon">
+                        <i class="fa-solid fa-chart-line"></i>
+                    </div>
+                    <div class="menu-name">
+                        <span>Leverage</span>
+                    </div>
+                </a>
+                <a class="menu-item">
+                    <div class="icon">
+                        <i class="fa-solid fa-bolt"></i>
+                    </div>
+                    <div class="menu-name">
+                        <span>Flash Mint</span>
+                    </div>
+                </a>
+                <a class="menu-item">
+                    <div class="icon">
+                        <i class="fa-solid fa-file"></i>
+                    </div>
+                    <div class="menu-name">
+                        <span>Docs</span>
+                    </div>
+                </a>
+                <a class="menu-item">
+                    <div class="icon">
+                        <i class="fa-solid fa-right-from-bracket"></i>
+                    </div>
+                    <div class="menu-name">
+                        <span>Logout</span>
+                    </div>
+                </a>
+            </div>
+            <div class="body-content">
+                <h1>Dashboard</h1>
+                <p class="small" id="todayTime"></p>
+                <div class="container">
+                    <!-- //////// LEFT COLUMN ///////// -->
+                    <div class="left-col">
+                        <div class="small-card-wrapper">
+                            <div class="card small-card">
+                                <div class="label flex1">
+                                    <span class="small">Today value</span>
+                                    <span class="icon"><i class="fa-solid fa-dollar-sign"></i></span>
+                                </div>
+                                <div class="numeric-value">
+                                    <span>$10.79</span>
+                                </div>
+                            </div>
+                            <div class="card small-card">
+                                <div class="label flex1">
+                                    <span class="small">Sales</span>
+                                    <span class="icon"><i class="fa-solid fa-arrow-trend-up"></i></span>
+                                </div>
+                                <div class="numeric-value">
+                                    <span>96.12%</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="small-card-wrapper">
+                            <div class="card small-card">
+                                <div class="label flex1">
+                                    <span class="small">Quick Transfer</span>
+                                    <span class="icon"><i class="fa-solid fa-arrow-trend-up"></i></span>
+                                </div>
+                                <div class="numeric-value">
+                                    <span>45.69%</span>
+                                </div>
+                            </div>
+                            <div class="card small-card">
+                                <div class="label flex1">
+                                    <span class="small">Expenses</span>
+                                    <span class="icon"><i class="fa-solid fa-arrow-trend-up"></i></span>
+                                </div>
+                                <div class="numeric-value">
+                                    <span>59.78%</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card long-card flex1">
+                            <div class="content">
+                                <span class="small">Circulating Supply (total)</span>
+                                <h2>32000 / 60000</h2>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-text">
+                                    <span>25%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- //////// RIGHT COLUMN ///////// -->
+                    <div class="right-col">
+                        <div class="card large-card">
+                            <div class="title flex1">
+                                <div class="label">
+                                    <span class="small">Total Revenue</span>
+                                    <h3>$21,790.00</h3>
+                                </div>
+                                <div class="icon">
+                                    <i class="fa-solid fa-percent"></i></span>
+                                </div>
+                            </div>
+                            <div id="chartdiv"></div>	
+                        </div>
+                        <div class="card long-card">
+                            <div class="list-item flex1">
+                                <div class="label">
+                                    <i class="fa-solid fa-table"></i> <span class="small">&nbsp; Market Cap</span>
+                                </div>
+                                <div class="label">
+                                    <span><b>$6,823.50</b></span>
+                                </div>
+                            </div>
+                            <div class="list-item flex1" style="margin-top: 12px;">
+                                <div class="label">
+                                    <i class="fa-solid fa-camera"></i> <span class="small">&nbsp; Market Value of
+                                        Treasury Assets</span>
+                                </div>
+                                <div class="label">
+                                    <span><b>$8,823.50</b></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FOOTER SECTION -->
+        <footer class="footer" id="footer">
+            <div class="social-media">
+                <i class="fa-brands fa-facebook-f"></i>
+                <i class="fa-brands fa-github"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-solid fa-mountain"></i>
+            </div>
+            <div class="copyright-content flex1">
+                <div class="copyright">
+                    <span class="small">Designed & Developed By Developer Room</span>
+                </div>
+                <div class="key-points">
+                    <p><i class="fa-solid fa-check"></i> KYC Verified</p>
+                    <p><i class="fa-solid fa-check"></i> MCN Ventures</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="https://www.amcharts.com/lib/3/amcharts.js?x"></script>
+    <script src="https://www.amcharts.com/lib/3/serial.js?x"></script>
+    <script src="https://www.amcharts.com/lib/3/themes/dark.js"></script>
+    <script src="./assets/js/main.js"></script>
+</body>
+
+</html>

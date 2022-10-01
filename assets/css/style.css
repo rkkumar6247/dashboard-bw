@@ -1,0 +1,544 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+:root {
+    --black: #141414;
+    --white: #ffffff;
+    --WHITEFORALL: #ffffff;
+    --light-gray: #f6f4f5;
+    --light-green: #ebfdef;
+    --primary: #14121f;
+    --secondary: #b6cbba;
+    --paragraph-color: #9a9a9b;
+    --border-color: #eeeeee;
+    --card-border-radius: 10px;
+    --box-shadow:
+        0px 0px 5.3px rgba(0, 0, 0, 0.048),
+        0px 0px 17.9px rgba(0, 0, 0, 0.072),
+        0px 0px 80px rgba(0, 0, 0, 0.12);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body.dark-mode{
+    --black: #ffffff;
+    --WHITEFORALL: #ffffff;
+    --white: #141414;
+    --light-gray: #1e1e1e;
+    --light-green: #38463b;
+    --primary: #ffffff;
+    --secondary: #b6cbba;
+    --paragraph-color: #d4d4d5;
+    --border-color: #3a3a3a;
+    --card-border-radius: 10px;
+    --box-shadow:
+        1.1px 1.1px 10px rgba(255, 255, 255, 0.035),
+        100px 100px 80px rgba(255, 255, 255, 0.07);
+}
+
+body {
+    background-color: var(--white);
+    font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
+    padding: 25px;
+    font-weight: 400;
+}
+
+::selection {
+    background: var(--primary);
+    color: var(--white);
+  }
+
+/* ========================
+        Global CSS 
+==========================*/
+h1 {
+    font-size: 32px;
+    font-weight: 800;
+    line-height: 1.5;
+    color: var(--black);
+}
+
+h2 {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.8;
+    color: var(--black);
+}
+
+h3 {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.8;
+    color: var(--black);
+}
+
+h4 {
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 1.8;
+    color: var(--black);
+}
+
+p {
+    font-size: 15px;
+    line-height: 1.8;
+    font-weight: 400;
+    color: var(--black);
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary);
+    cursor: pointer;
+}
+
+span,
+i {
+    color: var(--black);
+}
+
+.small {
+    font-size: 14px;
+    line-height: 1.8;
+    color: var(--paragraph-color);
+}
+
+.card {
+    padding: 20px;
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    box-shadow: 0px 0px 80px rgba(0, 0, 0, 0.05);
+
+}
+
+.card .label .icon {
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    line-height: 35px;
+    border: 1px solid var(--border-color);
+    border-radius: 50%;
+    transition: 0.3s ease;
+}
+
+.card:hover .label .icon {
+    background-color: var(--light-green);
+}
+
+.primary-button {
+    min-width: 150px;
+    padding: 15px 20px 15px 20px;
+    text-align: center;
+    color: var(--white);
+    background-color: var(--primary);
+    border-radius: 7px;
+    border: 2px solid var(--primary);
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+.primary-button:hover {
+    color: var(--primary);
+    background-color: var(--light-gray);
+    border-radius: 7px;
+    border: 2px solid var(--border-color);
+    transition: 0.5s ease;
+}
+
+.secondary-button {
+    padding: 15px 20px 15px 20px;
+    text-align: center;
+    color: var(--primary);
+    background-color: var(--light-gray);
+    border-radius: 7px;
+    border: 2px solid var(--border-color);
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+.secondary-button:hover {
+    color: var(--white) !important;
+    background-color: var(--primary);
+    border-radius: 7px;
+    border: 2px solid var(--primary);
+    transition: 0.5s ease;
+}
+
+.secondary-button:hover i {
+    color: var(--white);
+}
+.primary-button i {
+    color: var(--white);
+    transition: 0.3s ease;
+}
+.primary-button:hover i {
+    color: var(--primary);
+}
+
+.flex {
+    display: flex;
+}
+
+.flex1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* ========================
+        DASHBOARD CSS 
+==========================*/
+.wrapper {
+    width: 100%;
+    max-width: 1280px;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: var(--box-shadow);
+    border: 1px solid var(--border-color);
+}
+
+/* ========== GLOBAL LAYOUT ============== */
+.header,
+.body-section {
+    display: flex;
+    border-bottom: 2px solid var(--border-color);
+}
+
+.footer {
+    display: flex;
+}
+
+.header .logo,
+.body-section .sidebar,
+.footer .social-media {
+    width: 20%;
+    min-width: 150px;
+    padding: 20px;
+    background-color: var(--light-gray);
+    border-right: 2px solid var(--border-color);
+}
+
+.header .logo img {
+    width: 100%;
+    max-width: 180px;
+}
+
+.header .navbar,
+.body-section .body-content,
+.footer .copyright-content {
+    width: 80%;
+    padding: 20px;
+}
+
+.header .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .navbar-logo {
+    display: none;
+}
+
+.navbar .cta-button {
+    display: flex;
+    column-gap: 25px;
+}
+
+/* ======== SIDEBAR ========== */
+.body-section .sidebar {
+    padding: 40px 25px 40px 25px;
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 25px;
+    transition: 0.5s ease;
+}
+
+.body-section .sidebar a.menu-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 15px;
+    transition: 0.5s ease;
+}
+
+.body-section .sidebar a.menu-item:last-child {
+    margin-top: auto;
+}
+
+a.menu-item .menu-name span {
+    color: var(--paragraph-color);
+    transition: 0.3s ease;
+}
+
+.sidebar a.menu-item:hover{
+    margin-left: 10px;
+}
+.sidebar a.menu-item:hover .menu-name span {
+    color: var(--primary);
+}
+
+.body-section .body-content {
+    min-height: 500px;
+}
+
+.cta-button .humberger-menu {
+    display: none;
+}
+
+/* ============== FOOTER ============= */
+.footer .social-media {
+    display: flex;
+    gap: 20px;
+}
+
+.copyright-content .key-points {
+    display: flex;
+    column-gap: 25px;
+}
+
+/* ============ BODY CONTENT ============ */
+.body-content .container {
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
+    margin-top: 25px;
+}
+
+.body-content .container .left-col,
+.body-content .container .right-col {
+    width: 50%;
+}
+
+.body-content .container .left-col,
+.body-content .container .right-col {
+    display: flex;
+    flex-direction: column;
+    row-gap: 25px;
+}
+
+.container .left-col .small-card-wrapper {
+    display: flex;
+    gap: 25px;
+    justify-content: space-between;
+}
+
+.left-col .small-card-wrapper .small-card {
+    width: 50%;
+    min-height: 110px;
+}
+
+.small-card-wrapper .small-card .numeric-value {
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.card.long-card {
+    min-height: 110px;
+}
+
+.long-card .progress {
+    width: 70px;
+    height: 70px;
+    text-align: center;
+    line-height: 60px;
+    font-weight: 700;
+    border-radius: 50%;
+    border: 6px solid var(--border-color);
+    border-top: 6px solid var(--primary);
+    transform: rotate(40deg);
+}
+
+.long-card .progress .progress-text {
+    transform: rotate(-40deg);
+}
+
+.right-col .large-card {
+    min-height: 245px;
+    background-image: url('../img/image.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 10px;
+}
+
+.right-col .large-card h3 {
+    color: var(--WHITEFORALL);
+}
+
+.right-col .large-card .icon {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 50%;
+    background-color: var(--light-gray);
+    color: var(--primary);
+}
+
+/* =========MEDIA QUERY ========= */
+@media only screen and (max-width: 991px) {
+    .body-content .container {
+        flex-direction: column;
+    }
+
+    .body-content .container .left-col {
+        width: 100%;
+    }
+
+    .body-content .container .right-col {
+        width: 100%;
+    }
+
+    .right-col .large-card {
+        min-height: 100px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    body {
+        padding: 0;
+        box-shadow: none;
+    }
+    .wrapper{
+        border: 0px;
+        box-shadow: none;
+        border-radius: 0;
+    }
+
+    .header .logo {
+        display: none;
+    }
+
+    .navbar .navbar-logo {
+        display: block;
+        max-width: 60px;
+    }
+
+    .navbar .navbar-logo img {
+        width: 100%;
+    }
+
+    .body-section .sidebar {
+        display: none;
+        transition: 0.5s ease;
+    }
+
+    .footer .social-media {
+        display: none;
+    }
+
+    .header .navbar {
+        width: 100%;
+    }
+
+    .navbar .current-price {
+        display: none;
+    }
+
+    .cta-button .dark-mode {
+        display: none;
+    }
+
+    .cta-button .humberger-menu {
+        display: block;
+        z-index: 999;
+    }
+
+    .body-section .body-content {
+        width: 100%;
+    }
+
+    .footer .copyright-content {
+        width: 100%;
+    }
+
+    /* show hide menu */
+    .wrapper {
+        position: relative;
+    }
+
+    .sidebar.mobile-menu {
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        width: 35%;
+        min-width: 190px;
+        display: block;
+        padding: 50px 20px;
+        padding-top: 110px;
+        transition: 0.5s ease;
+        z-index: 1;
+    }
+
+    .sidebar.mobile-menu a.menu-item {
+        margin-bottom: 30px;
+    }
+}
+
+@media only screen and (max-width: 579px) {
+    h1 {
+        font-size: 28px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    h3 {
+        font-size: 17px;
+    }
+
+    p {
+        font-size: 15px;
+    }
+
+    .small {
+        font-size: 14px;
+    }
+
+    a {
+        font-size: 15px;
+    }
+
+    .small-card-wrapper .small-card .numeric-value {
+        font-size: 22px;
+    }
+
+    .footer .copyright-content {
+        flex-direction: column;
+        row-gap: 10px;
+    }
+
+    .primary-button {
+        min-width: 100px;
+        padding: 12px;
+    }
+
+    .secondary-button {
+        padding: 12px 18px;
+    }
+}
+
+@media only screen and (max-width: 459px) {
+    .footer .copyright-content {
+        flex-direction: column;
+        row-gap: 10px;
+    }
+
+    .card {
+        padding: 15px;
+        border-radius: 7px;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .navbar .cta-button .primary-button {
+        display: none;
+    }
+}
